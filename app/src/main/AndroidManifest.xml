@@ -1,0 +1,11 @@
+
+<manifest package="com.snipergold.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application android:name=".App" android:label="SniperGold Perfect">
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+        </activity>
+        <service android:name=".service.AutoTradeForegroundService" android:foregroundServiceType="dataSync"/>
+    </application>
+</manifest>
